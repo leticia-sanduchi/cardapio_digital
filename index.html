@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santo Açúcar - Cardápio Digital</title>
+  
+  <!-- Estilos customizados -->
+  <link rel="stylesheet" href="./src/css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Santo Açúcar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cardapio">Cardápio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pedido">Fazer Pedido</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="inicio" class="text-center py-5 mb-5">
+    <div class="container py-3">
+      <h1 class="display-4">Cardápio Digital de Doces</h1>
+      <p class="lead mb-4">Bolos artesanais, brigadeiros gourmet e sobremesas irresistíveis feitos diariamente.</p>
+      <a href="#cardapio" class="btn btn-warning btn-lg fw-semibold">Ver Opções</a>
+    </div>
+  </header>
+
+
+  <main id="cardapio" class="container mb-5">
+    <div class="row text-center mb-4">
+      <div class="col">
+        <h2 class="fw-bold">Nossas Delícias</h2>
+        <p class="text-muted">Escolha seus favoritos para montar seu pedido</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0">
+          <img src="./src/img/bolo-cenoura.jpg" class="card-img-top" alt="Bolo de Cenoura Vulcão" />
+          <div class="card-body p-4 d-flex flex-column">
+            <span class="badge bg-danger align-self-start mb-2">Mais Pedido</span>
+            <h5 class="card-title fw-bold">Bolo de Cenoura Vulcão</h5>
+            <p class="card-text text-muted flex-grow-1">Massa fofinha de cenoura com cobertura vulcão abundante de brigadeiro cremoso.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="fw-bold fs-5">R$ 22,00</span>
+              <button class="btn btn-outline-danger btn-sm add-to-cart" data-nome="Bolo de Cenoura Vulcão">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0">
+          <img src="./src/img/brigadeiros.jpg" class="card-img-top" alt="Caixa de Brigadeiros Gourmet" />
+          <div class="card-body p-4 d-flex flex-column">
+            <span class="badge bg-warning align-self-start mb-2">Edição da Semana</span>
+            <h5 class="card-title fw-bold">Caixa de Brigadeiros Gourmet (21 un)</h5>
+            <p class="card-text text-muted flex-grow-1">Caixa especial com 21 brigadeiros gourmet em sabores sortidos que mudam a cada semana.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="fw-bold fs-5">R$ 48,00</span>
+              <button class="btn btn-outline-danger btn-sm add-to-cart" data-nome="Caixa de Brigadeiros Gourmet (21 un)">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0">
+          <img src="./src/img/banoffee.jpg" class="card-img-top" alt="Banoffee" />
+          <div class="card-body p-4 d-flex flex-column">
+            <span class="badge bg-success align-self-start mb-2">Clássico</span>
+            <h5 class="card-title fw-bold">Banoffee</h5>
+            <p class="card-text text-muted flex-grow-1">Base crocante de biscoito, doce de leite artesanal, bananas frescas e chantilly polvilhado com canela.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="fw-bold fs-5">R$ 16,00</span>
+              <button class="btn btn-outline-danger btn-sm add-to-cart" data-nome="Banoffee">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0">
+          <img src="./src/img/cookies.jpg" class="card-img-top" alt="Cookies Artesanais" />
+          <div class="card-body p-4 d-flex flex-column">
+            <span class="badge bg-success align-self-start mb-2">Artesanal</span>
+            <h5 class="card-title fw-bold">Cookies Tradicionais</h5>
+            <p class="card-text text-muted flex-grow-1">Cookies crocantes por fora e macios por dentro, recheados com generosas gotas de chocolate meio amargo.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="fw-bold fs-5">R$ 10,00</span>
+              <button class="btn btn-outline-danger btn-sm add-to-cart" data-nome="Cookies Tradicionais">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0">
+          <img src="./src/img/palha-italiana.jpg" class="card-img-top" alt="Palha Italiana" />
+          <div class="card-body p-4 d-flex flex-column">
+            <span class="badge bg-danger align-self-start mb-2">Sucesso</span>
+            <h5 class="card-title fw-bold">Palha Italiana</h5>
+            <p class="card-text text-muted flex-grow-1">Combinação perfeita de brigadeiro gourmet denso com pedaços crocantes de biscoito de leite.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="fw-bold fs-5">R$ 8,00</span>
+              <button class="btn btn-outline-danger btn-sm add-to-cart" data-nome="Palha Italiana">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <section id="pedido" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+          <h3 class="fw-bold text-center mb-4">Monte seu Pedido</h3>
+          <form id="formPedido" class="p-4 shadow-sm">
+            <div class="mb-3">
+              <label for="nome" class="form-label fw-semibold">Seu Nome</label>
+              <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required />
+            </div>
+            <div class="mb-3">
+              <label for="itens" class="form-label fw-semibold">Itens Escolhidos</label>
+              <textarea class="form-control" id="itens" rows="3" placeholder="Clique em 'Adicionar' nos produtos ou digite aqui..." required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="observacao" class="form-label fw-semibold">Observações / Entrega</label>
+              <input type="text" class="form-control" id="observacao" placeholder="Ex: Entregar às 15h, sem canela no banoffee" />
+            </div>
+            <button type="submit" class="btn btn-danger w-100 fw-bold py-2">Enviar Pedido</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-3">
+    <div class="container">
+      <small>&copy; 2026 Dulce Delight - Feito em dupla com Bootstrap & npm</small>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/js/script.js"></script>
+</body>
+</html>

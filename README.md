@@ -45,3 +45,4 @@ O objetivo do projeto é desenvolver uma interface de cardápio moderna e respon
 ## 📌 Considerações finais
 
 O projeto foi desenvolvido como uma atividade prática para aplicar conhecimentos de desenvolvimento web, organização de conteúdo, estilização e criação de interfaces responsivas.
+

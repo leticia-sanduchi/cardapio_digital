@@ -1,233 +1,57 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+:root {
+  --bs-font-sans-serif: "Karla", "Segoe UI", Arial, sans-serif;
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-bg: #fff8f3;
+  --bs-body-color: #3a2226;
+
+  --bs-primary: #7b2a40;
+  --bs-primary-rgb: 123, 42, 64;
+  --bs-danger: #e8517a;
+  --bs-danger-rgb: 232, 81, 122;
+  --bs-warning: #d9a441;
+  --bs-warning-rgb: 217, 164, 65;
+  --bs-success: #4f1b2b;
+  --bs-success-rgb: 79, 27, 43;
+
+  --bs-link-color: var(--bs-danger);
+  --bs-link-hover-color: #c93764;
 }
 
-body {
-    font-family: "Poppins", Arial, sans-serif;
-    background: #fff7f9;
-    color: #4a2c2a;
+h1, h2, h3, h4, h5, .navbar-brand {
+  font-family: "Fraunces", Georgia, serif;
 }
 
-header {
-    background: linear-gradient(135deg, #ff8fab, #ffb3c6);
-    padding: 20px 8%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+html {
+  scroll-padding-top: 70px; /* compensa a navbar sticky ao clicar em âncoras */
 }
 
-header h1 {
-    color: white;
-    font-size: 32px;
-    font-weight: 700;
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
 }
-
-header p {
-    color: #fff;
-    margin-top: 5px;
-}
-
-
-/* =========================================
-   🍩 MENU DE NAVEGAÇÃO
-   ========================================= */
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 18px;
-    background: white;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-}
-
-nav a {
-    text-decoration: none;
-    color: #8a4054;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #ff5c8a;
-    transform: translateY(-2px);
-}
-
-
-/* =========================================
-   🍓 TÍTULOS
-   ========================================= */
-
-h2 {
-    text-align: center;
-    margin: 45px 0 25px;
-    color: #8a4054;
-    font-size: 30px;
-}
-
-h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: #ff8fab;
-    margin: 10px auto;
-    border-radius: 10px;
-}
-
-
-/* =========================================
-   🧁 ÁREA DOS PRODUTOS
-   ========================================= */
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.produtos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-    padding: 20px 0 50px;
-}
-
-
-/* =========================================
-   🍰 CARD DOS DOCES
-   ========================================= */
 
 .card {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    transition: 0.3s ease;
-    border: 1px solid #ffe1e8;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(255, 92, 138, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
-
-/* Imagem do doce */
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
-
-
-/* Conteúdo do card */
-
-.card-body {
-    padding: 20px;
-}
-
-.card h3 {
-    color: #7b374a;
-    font-size: 21px;
-    margin-bottom: 8px;
-}
-
-.card p {
-    color: #777;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-
-.preco {
-    display: block;
-    margin-top: 15px;
-    color: #ff4f81;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 11px 20px;
-    background: linear-gradient(135deg, #ff6f91, #ff8fab);
-    color: white;
-    text-decoration: none;
-    border: none;
-    border-radius: 30px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(255, 92, 138, 0.3);
-}
-
-
-.categorias {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin: 20px 0 35px;
-}
-
-.categoria {
-    padding: 10px 20px;
-    background: #ffe1e8;
-    color: #8a4054;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.categoria:hover {
-    background: #ff8fab;
-    color: white;
-    transform: translateY(-3px);
-}
-
-
-footer {
-    background: #5c3037;
-    color: white;
-    text-align: center;
-    padding: 30px;
-    margin-top: 40px;
-}
-
-footer p {
-    margin: 5px;
-}
-
-
-@media (max-width: 600px) {
-
-    header {
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 26px;
-    }
-
-    nav {
-        gap: 15px;
-        flex-wrap: wrap;
-    }
-
-    h2 {
-        font-size: 25px;
-    }
-
-    .produtos {
-        grid-template-columns: 1fr;
-    }
+/* Contador de itens no link "Fazer Pedido", inserido pelo script.js */
+.contador-carrinho {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding: 0 0.3rem;
+  margin-left: 0.35rem;
+  border-radius: 999px;
+  background: var(--bs-danger);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
 }

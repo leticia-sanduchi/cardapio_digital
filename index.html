@@ -4,16 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Santo Açúcar - Cardápio Digital</title>
-  
-  <!-- Estilos customizados -->
+
+  <!-- Bootstrap instalado via npm (node_modules), sem CDN -->
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+  <!-- Tipografia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Estilos customizados (por cima do Bootstrap) -->
   <link rel="stylesheet" href="./src/css/style.css" />
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="90" tabindex="0">
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Santo Açúcar</a>
+      <a class="navbar-brand fw-bold text-primary" href="#">Santo Açúcar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -27,7 +38,7 @@
     </div>
   </nav>
 
-  <header id="inicio" class="text-center py-5 mb-5">
+  <header id="inicio" class="text-center py-5 mb-5 bg-primary text-white">
     <div class="container py-3">
       <h1 class="display-4">Cardápio Digital de Doces</h1>
       <p class="lead mb-4">Bolos artesanais, brigadeiros gourmet e sobremesas irresistíveis feitos diariamente.</p>
@@ -48,7 +59,7 @@
         <div class="card h-100 border-0">
           <img src="./src/img/bolo-cenoura.jpg" class="card-img-top" alt="Bolo de Cenoura Vulcão" />
           <div class="card-body p-4 d-flex flex-column">
-            <span class="badge bg-danger align-self-start mb-2">Mais Pedido</span>
+            <span class="badge text-bg-danger align-self-start mb-2">Mais Pedido</span>
             <h5 class="card-title fw-bold">Bolo de Cenoura Vulcão</h5>
             <p class="card-text text-muted flex-grow-1">Massa fofinha de cenoura com cobertura vulcão abundante de brigadeiro cremoso.</p>
             <div class="d-flex justify-content-between align-items-center mt-3">
@@ -63,7 +74,7 @@
         <div class="card h-100 border-0">
           <img src="./src/img/brigadeiros.jpg" class="card-img-top" alt="Caixa de Brigadeiros Gourmet" />
           <div class="card-body p-4 d-flex flex-column">
-            <span class="badge bg-warning align-self-start mb-2">Edição da Semana</span>
+            <span class="badge text-bg-warning align-self-start mb-2">Edição da Semana</span>
             <h5 class="card-title fw-bold">Caixa de Brigadeiros Gourmet (21 un)</h5>
             <p class="card-text text-muted flex-grow-1">Caixa especial com 21 brigadeiros gourmet em sabores sortidos que mudam a cada semana.</p>
             <div class="d-flex justify-content-between align-items-center mt-3">
@@ -78,7 +89,7 @@
         <div class="card h-100 border-0">
           <img src="./src/img/banoffee.jpg" class="card-img-top" alt="Banoffee" />
           <div class="card-body p-4 d-flex flex-column">
-            <span class="badge bg-success align-self-start mb-2">Clássico</span>
+            <span class="badge text-bg-success align-self-start mb-2">Clássico</span>
             <h5 class="card-title fw-bold">Banoffee</h5>
             <p class="card-text text-muted flex-grow-1">Base crocante de biscoito, doce de leite artesanal, bananas frescas e chantilly polvilhado com canela.</p>
             <div class="d-flex justify-content-between align-items-center mt-3">
@@ -93,7 +104,7 @@
         <div class="card h-100 border-0">
           <img src="./src/img/cookies.jpg" class="card-img-top" alt="Cookies Artesanais" />
           <div class="card-body p-4 d-flex flex-column">
-            <span class="badge bg-success align-self-start mb-2">Artesanal</span>
+            <span class="badge text-bg-success align-self-start mb-2">Artesanal</span>
             <h5 class="card-title fw-bold">Cookies Tradicionais</h5>
             <p class="card-text text-muted flex-grow-1">Cookies crocantes por fora e macios por dentro, recheados com generosas gotas de chocolate meio amargo.</p>
             <div class="d-flex justify-content-between align-items-center mt-3">
@@ -108,7 +119,7 @@
         <div class="card h-100 border-0">
           <img src="./src/img/palha-italiana.jpg" class="card-img-top" alt="Palha Italiana" />
           <div class="card-body p-4 d-flex flex-column">
-            <span class="badge bg-danger align-self-start mb-2">Sucesso</span>
+            <span class="badge text-bg-danger align-self-start mb-2">Sucesso</span>
             <h5 class="card-title fw-bold">Palha Italiana</h5>
             <p class="card-text text-muted flex-grow-1">Combinação perfeita de brigadeiro gourmet denso com pedaços crocantes de biscoito de leite.</p>
             <div class="d-flex justify-content-between align-items-center mt-3">
@@ -127,7 +138,7 @@
       <div class="row justify-content-center">
         <div class="col-12 col-md-8">
           <h3 class="fw-bold text-center mb-4">Monte seu Pedido</h3>
-          <form id="formPedido" class="p-4 shadow-sm">
+          <form id="formPedido" class="p-4 shadow-sm" novalidate>
             <div class="mb-3">
               <label for="nome" class="form-label fw-semibold">Seu Nome:</label>
               <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required />
@@ -147,12 +158,17 @@
     </div>
   </section>
 
-  <footer class="text-center py-3">
+  <footer class="text-center py-3 bg-dark text-white">
     <div class="container">
       <small>&copy; 2026 Santo Açúcar</small>
     </div>
   </footer>
 
+  <!-- Container onde o toast de confirmação de pedido é inserido pelo script.js -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer"></div>
+
+  <!-- Bootstrap JS (bundle com Popper) instalado via npm, sem CDN -->
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script type="module" src="./src/js/script.js"></script>
 </body>
 </html>
